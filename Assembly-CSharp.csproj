@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{29F5450B-80ED-3066-82FE-FA1F6692096C}</ProjectGuid>
+    <ProjectGuid>{C9B2B33F-7B20-704A-18B1-0ED7E01ED8FF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,11 +58,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\TipToePlatform.cs" />
     <Compile Include="Assets\Scripts\DeathPlane.cs" />
+    <Compile Include="Assets\Scripts\physicsCharacterControl.cs" />
     <Compile Include="Assets\Scripts\SimpleCharacterControl.cs" />
     <Compile Include="Assets\Scripts\GoalPlatform.cs" />
     <Compile Include="Assets\Scripts\TipToeLogic.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\physicsCharacterControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
