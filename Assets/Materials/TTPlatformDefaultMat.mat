@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TTPlatformDefaultMat
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 9c551b457274770418c33db0c012ac6a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -47,6 +47,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: 88f7f45b1a1798f45834d34edf7c2914, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseText:
+        m_Texture: {fileID: 2800000, guid: 88f7f45b1a1798f45834d34edf7c2914, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -61,8 +69,9 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.479
     - _GlossyReflections: 1
+    - _LightBandThreshold: 0.106
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -71,8 +80,10 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _VanishingThreshold: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.9921569, g: 0.47450984, b: 0.14509805, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _LightBandColor: {r: 0.13995194, g: 0.6864906, b: 0.8018868, a: 1}
   m_BuildTextureStacks: []

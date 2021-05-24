@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2282959409288894994}
   - component: {fileID: 2282959409288894995}
   - component: {fileID: 2282959409288895020}
+  - component: {fileID: 147890383267291391}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6d569b1805b1ec74493ee5eb20623057, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,3 +114,20 @@ MonoBehaviour:
   touchedMaterial: {fileID: 2100000, guid: bbf91da1e6396144b90ac48ca195c623, type: 2}
   maxTouchedTime: 5
   maxDeadTime: 3
+--- !u!114 &147890383267291391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2282959409288895021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 2b3c7eee74f17004b83b444088678b05, type: 2}
+  isGlobal: 1
+  blendDistance: 10
+  weight: 1
+  priority: 0

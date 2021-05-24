@@ -16,6 +16,7 @@ public class TipToePlatform : MonoBehaviour
     BoxCollider bCollider;
     public bool isPath;
     public Material defaultMaterial;
+    private Shader shader;
 
     //Variables Touched State
     public Material touchedMaterial;
@@ -25,28 +26,32 @@ public class TipToePlatform : MonoBehaviour
     //Variables Dead State
     float deadTimer = 0.0f;
     public float maxDeadTime = 3.0f;
+    public float dissolveTime = 1.0f;
+    
+    
 
     void Start()
     {
         meshRend = GetComponent<MeshRenderer>();
         meshRend.material = defaultMaterial;
         bCollider = GetComponent<BoxCollider>();
+        meshRend.material.SetFloat("_Vanishing",0.0f);
     }
 
     void Update()
     {
         if (state == State.Dead)
         {
-            //Count down timer until respawn of platform
-            deadTimer -= Time.deltaTime;
-            if (deadTimer <= 0.0f)
+            //Count up timer until respawn of platform
+            deadTimer += Time.deltaTime;
+            if (deadTimer > maxDeadTime)
             {
                 ChangeState(State.Default);
                 deadTimer = 0.0f;
-                meshRend.enabled = true;
                 bCollider.enabled = true;
                 meshRend.material = defaultMaterial;
             }
+            meshRend.material.SetFloat("_VanishingThreshold", Mathf.Clamp01(Mathf.InverseLerp(0,dissolveTime,deadTimer)));
         }
         if (state == State.Touched)
         {
@@ -71,8 +76,6 @@ public class TipToePlatform : MonoBehaviour
         if (!isPath)
         {
             ChangeState(State.Dead);
-            deadTimer = maxDeadTime;
-            meshRend.enabled = false;
             bCollider.enabled = false;
         }
         else
